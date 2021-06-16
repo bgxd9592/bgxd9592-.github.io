@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: sga;
-    src: url(assets/fonts/sga.woff);
+    src: url(https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/assets/fonts/sga.woff);
     unicode-range: U+0041-005A;
 }
 
@@ -50,7 +50,6 @@
     top: 8px;
     margin: 6px;
     padding: 0.4em;
-    min-width: 140px;
     background-color: #372237;
     border: 2px solid #5519af;
     border-radius: 4px;
@@ -63,10 +62,6 @@
 .mcview-itemstack:hover .mcview.item-tooltip {
     display: block;
 }
-.mcview.item-tooltip .item-preview {
-    margin-top: 0.6em;
-    display: inline-block;
-}
 .mcview.item-tooltip .register-name,
 .mcview.item-tooltip .zh-name {
     text-align: left;
@@ -78,6 +73,18 @@
     bottom: 0;
     color: white;
     text-shadow: 2px 2px 0 #3f3f3f;
+}
+.mcview.item-durability {
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #373737;
+}
+.item-durability > .value {
+    position: absolute;
+    height: 2.6px;
 }
 
 .mcview-itemicon {
@@ -161,8 +168,9 @@
 .mcui-plus {
     width: 26px;
     height: 26px;
-    margin: 3px 3px;
+    margin: 0 18px;
 }
+
 .mcui-slot-placeholder {
     width: 32px;
     height: 32px;
