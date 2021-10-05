@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,12 +13,12 @@
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">测试</div>
+        <div class="title">beta</div>
       </div>
     </div>
 	<script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
-	 <script>
+    <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
     </script>
   </body>
