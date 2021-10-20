@@ -1,7 +1,7 @@
 {
 "companyName": "DefaultCompany",
 "productName": "结课作业",
-"productVersion": "0.4",
+"productVersion": "0.5",
 "dataUrl": "Web.data.unityweb",
 "wasmCodeUrl": "Web.wasm.code.unityweb",
 "wasmFrameworkUrl": "Web.wasm.framework.unityweb",
@@ -10,7 +10,7 @@
 "splashScreenStyle": "Light",
 "backgroundColor": "#828080",
 "cacheControl": {"default": "must-revalidate"},
-"developmentBuild": true,
+"developmentBuild": false,
 "multithreading": false,
 "unityVersion": "2019.4.30f1c1"
 }
