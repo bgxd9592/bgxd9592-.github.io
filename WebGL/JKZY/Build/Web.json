@@ -1,7 +1,7 @@
 {
 "companyName": "DefaultCompany",
 "productName": "结课作业",
-"productVersion": "0.5",
+"productVersion": "0.6",
 "dataUrl": "Web.data.unityweb",
 "wasmCodeUrl": "Web.wasm.code.unityweb",
 "wasmFrameworkUrl": "Web.wasm.framework.unityweb",
