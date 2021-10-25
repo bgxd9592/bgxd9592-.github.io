@@ -1,7 +1,7 @@
 {
 "companyName": "bgxd9592",
 "productName": "狗子大冒险",
-"productVersion": "0.8",
+"productVersion": "0.9",
 "dataUrl": "Web.data.unityweb",
 "wasmCodeUrl": "Web.wasm.code.unityweb",
 "wasmFrameworkUrl": "Web.wasm.framework.unityweb",
