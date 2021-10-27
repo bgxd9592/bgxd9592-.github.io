@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>狗子大作战 | V0.9.1</title>
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/TemplateData/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/TemplateData/style.css">
-    <script src="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/TemplateData/UnityProgress.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">狗子大作战</div>
-      </div>
-    </div>
-	<div id="SOHUCS" sid="GZDZZ" ></div> 
-	<script type="text/javascript"> 
-	(function(){ 
-	var appid = 'cyvJefmts'; 
-	var conf = 'prod_375e292c2705c97c8caf3f7bd571991b'; 
-	var width = window.innerWidth || document.documentElement.clientWidth; 
-	if (width < 1000) {
-	var head = document.getElementsByTagName('head')[0]||document.head||document.documentElement;
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.charset = 'utf-8';
-	script.id = 'changyan_mobile_js';
-	script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
-	head.appendChild(script);
-	} else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>狗子大作战 | V0.9.1</title>
+		<link rel="shortcut icon"
+			href="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/TemplateData/favicon.ico">
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/TemplateData/style.css">
+		<script src="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/TemplateData/UnityProgress.js">
+		</script>
+		<script src="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/GZDZZ/Build/UnityLoader.js"></script>
+		<script>
+			var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Web.json", {
+				onProgress: UnityProgress
+			});
+		</script>
+	</head>
+	<body>
+		<div class="webgl-content">
+			<div id="unityContainer" style="width: 960px; height: 600px"></div>
+			<div class="footer">
+				<div class="webgl-logo"></div>
+				<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+				<div class="title">狗子大作战</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div id="SOHUCS" sid="GZDZZ"></div>
+		<script type="text/javascript">
+			(function() {
+				var appid = 'cyvJefmts';
+				var conf = 'prod_375e292c2705c97c8caf3f7bd571991b';
+				var width = window.innerWidth || document.documentElement.clientWidth;
+				if (width < 1000) {
+					var head = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
+					var script = document.createElement('script');
+					script.type = 'text/javascript';
+					script.charset = 'utf-8';
+					script.id = 'changyan_mobile_js';
+					script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid +
+						'&conf=' + conf;
+					head.appendChild(script);
+				} else {
+					var loadJs = function(d, a) {
+						var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+						var b = document.createElement("script");
+						b.setAttribute("type", "text/javascript");
+						b.setAttribute("charset", "UTF-8");
+						b.setAttribute("src", d);
+						if (typeof a === "function") {
+							if (window.attachEvent) {
+								b.onreadystatechange = function() {
+									var e = b.readyState;
+									if (e === "loaded" || e === "complete") {
+										b.onreadystatechange = null;
+										a()
+									}
+								}
+							} else {
+								b.onload = a
+							}
+						}
+						c.appendChild(b)
+					};
+					loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js", function() {
+						window.changyan.api.config({
+							appid: appid,
+							conf: conf
+						})
+					});
+				}
+			})();
+		</script>
 
-  </body>
+	</body>
 </html>
