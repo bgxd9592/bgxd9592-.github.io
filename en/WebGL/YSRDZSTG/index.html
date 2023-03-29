@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Unity WebGL Player | Primitives fighting monsters</title>
+		<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/YSRDZSTG/TemplateData/favicon.ico">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgxd9592/bgxd9592.github.io/WebGL/YSRDZSTG/TemplateData/style.css">
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?b8e0a4da4717c138fca27c6a31b975e2";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+	</head>
+	<body>
+		<div id="unity-container" class="unity-desktop">
+			<canvas id="unity-canvas" width="960" height="600"></canvas>
+			<div id="unity-loading-bar">
+				<div id="unity-logo"></div>
+				<div id="unity-progress-bar-empty">
+					<div id="unity-progress-bar-full"></div>
+				</div>
+			</div>
+			<div id="unity-mobile-warning">This application does not support mobile terminal</div>
+			<div id="unity-footer">
+				<div id="unity-webgl-logo"></div>
+				<div id="unity-fullscreen-button"></div>
+				<div id="unity-build-title">Primitives fight against monsters</div>
+			</div>
+		</div>
+		<script>
+			var buildUrl = "Build";
+			var loaderUrl = buildUrl + "/rsj.loader.js";
+			var config = {
+				dataUrl: buildUrl + "/rsj.data",
+				frameworkUrl: buildUrl + "/rsj.framework.js",
+				codeUrl: buildUrl + "/rsj.wasm",
+				streamingAssetsUrl: "StreamingAssets",
+				companyName: "DefaultCompany",
+				productName: "zuoye",
+				productVersion: "0.1",
+			};
+
+			var container = document.querySelector("#unity-container");
+			var canvas = document.querySelector("#unity-canvas");
+			var loadingBar = document.querySelector("#unity-loading-bar");
+			var progressBarFull = document.querySelector("#unity-progress-bar-full");
+			var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+			var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+			// By default Unity keeps WebGL canvas render target size matched with
+			// the DOM size of the canvas element (scaled by window.devicePixelRatio)
+			// Set this to false if you want to decouple this synchronization from
+			// happening inside the engine, and you would instead like to size up
+			// the canvas DOM size and WebGL render target sizes yourself.
+			// config.matchWebGLToCanvasSize = false;
+
+			if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+				container.className = "unity-mobile";
+				// Avoid draining fillrate performance on mobile devices,
+				// and default/override low DPI mode on mobile browsers.
+				config.devicePixelRatio = 1;
+				mobileWarning.style.display = "block";
+				setTimeout(() => {
+					mobileWarning.style.display = "none";
+				}, 5000);
+			} else {
+				canvas.style.width = "960px";
+				canvas.style.height = "600px";
+			}
+			loadingBar.style.display = "block";
+
+			var script = document.createElement("script");
+			script.src = loaderUrl;
+			script.onload = () => {
+				createUnityInstance(canvas, config, (progress) => {
+					progressBarFull.style.width = 100 * progress + "%";
+				}).then((unityInstance) => {
+					loadingBar.style.display = "none";
+					fullscreenButton.onclick = () => {
+						unityInstance.SetFullscreen(1);
+					};
+				}).catch((message) => {
+					alert(message);
+				});
+			};
+			document.body.appendChild(script);
+		</script>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div id="SOHUCS" sid="YSRDZSTG"></div>
+		<script type="text/javascript">
+			(function() {
+				var appid = 'cyvJefmts';
+				var conf = 'prod_375e292c2705c97c8caf3f7bd571991b';
+				var width = window.innerWidth || document.documentElement.clientWidth;
+				if (width < 1000) {
+					var head = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
+					var script = document.createElement('script');
+					script.type = 'text/javascript';
+					script.charset = 'utf-8';
+					script.id = 'changyan_mobile_js';
+					script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid +
+						'&conf=' + conf;
+					head.appendChild(script);
+				} else {
+					var loadJs = function(d, a) {
+						var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+						var b = document.createElement("script");
+						b.setAttribute("type", "text/javascript");
+						b.setAttribute("charset", "UTF-8");
+						b.setAttribute("src", d);
+						if (typeof a === "function") {
+							if (window.attachEvent) {
+								b.onreadystatechange = function() {
+									var e = b.readyState;
+									if (e === "loaded" || e === "complete") {
+										b.onreadystatechange = null;
+										a()
+									}
+								}
+							} else {
+								b.onload = a
+							}
+						}
+						c.appendChild(b)
+					};
+					loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js", function() {
+						window.changyan.api.config({
+							appid: appid,
+							conf: conf
+						})
+					});
+				}
+			})();
+		</script>
+
+	</body>
+</html>
